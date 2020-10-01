@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		10BFCDFB2526483A00AD503D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10BFCDFA2526483A00AD503D /* Preview Assets.xcassets */; };
 		10BFCE062526483A00AD503D /* SnapshotTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFCE052526483A00AD503D /* SnapshotTestTests.swift */; };
 		10BFCE112526483A00AD503D /* SnapshotTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFCE102526483A00AD503D /* SnapshotTestUITests.swift */; };
+		10BFCE252526527A00AD503D /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFCE242526527A00AD503D /* ContentViewTests.swift */; };
+		10BFCE312526540200AD503D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 10BFCE302526540200AD503D /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		10BFCE0C2526483A00AD503D /* SnapshotTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BFCE102526483A00AD503D /* SnapshotTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestUITests.swift; sourceTree = "<group>"; };
 		10BFCE122526483A00AD503D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10BFCE242526527A00AD503D /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BFCE312526540200AD503D /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +121,7 @@
 			children = (
 				10BFCE052526483A00AD503D /* SnapshotTestTests.swift */,
 				10BFCE072526483A00AD503D /* Info.plist */,
+				10BFCE242526527A00AD503D /* ContentViewTests.swift */,
 			);
 			path = SnapshotTestTests;
 			sourceTree = "<group>";
@@ -146,6 +151,8 @@
 			dependencies = (
 			);
 			name = SnapshotTest;
+			packageProductDependencies = (
+			);
 			productName = SnapshotTest;
 			productReference = 10BFCDF02526483900AD503D /* SnapshotTest.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +171,9 @@
 				10BFCE032526483A00AD503D /* PBXTargetDependency */,
 			);
 			name = SnapshotTestTests;
+			packageProductDependencies = (
+				10BFCE302526540200AD503D /* SnapshotTesting */,
+			);
 			productName = SnapshotTestTests;
 			productReference = 10BFCE012526483A00AD503D /* SnapshotTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -217,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 10BFCDE72526483900AD503D;
+			packageReferences = (
+				10BFCE2F2526540200AD503D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 10BFCDF12526483900AD503D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BFCE252526527A00AD503D /* ContentViewTests.swift in Sources */,
 				10BFCE062526483A00AD503D /* SnapshotTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10BFCE2F2526540200AD503D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10BFCE302526540200AD503D /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10BFCE2F2526540200AD503D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10BFCDE82526483900AD503D /* Project object */;
 }
