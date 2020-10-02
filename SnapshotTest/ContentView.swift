@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Color.white
+        Color.green
             .ignoresSafeArea()
             .overlay(
                 Text("Hello, world!")

@@ -14,6 +14,6 @@ import SwiftUI
 class ContentViewTests: XCTestCase {
     func test() {
         let contentView = UIHostingController(rootView: ContentView())
-        assertSnapshot(matching: contentView, as: .image(on: .iPhoneX))
+        assertSnapshot(matching: contentView, as: .image(on: .iPhone))
     }
 }
