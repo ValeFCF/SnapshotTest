@@ -12,15 +12,10 @@ struct ContentView: View {
         Color.green
             .ignoresSafeArea()
             .overlay(
-                VStack {
-                    Text("Hello, world!")
-                        .padding()
-                    label
-                }
+                Text("Hello, world!")
+                    .padding()
             )
     }
-    
-    let label = Label("my device", systemImage: "iphone")
 }
 
 struct ContentView_Previews: PreviewProvider {
