@@ -9,9 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Color.green
+            .ignoresSafeArea()
+            .overlay(
+                VStack {
+                    Text("Hello, world!")
+                        .padding()
+                    label
+                }
+            )
     }
+    
+    let label = Label("hola1", systemImage: "iphone")
 }
 
 struct ContentView_Previews: PreviewProvider {
